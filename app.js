@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   renderPosts();
 
-  $("button").click(function () {
+  $(".btn").click(function () {
     let subRedd = $(this).text();
     subRedd = subRedd.toLowerCase();
 
@@ -57,4 +57,24 @@ $(document).ready(function () {
 
     renderPosts(subRedd);
   });
+});
+
+$(document).ready(function () {
+	$(".scrollable").click(function(){
+		$(".row").animate({
+			left: '250px',
+			height: '-=500px',
+			width: '-=500px'
+		});	
+ 	});
+});
+
+$(document).ready(function () {
+	$(".normalize").click(function(){
+		$(".row").animate({
+			left: '250px',
+			height: '+=500px',
+			width: '+=500px'
+		});	
+ 	});
 });

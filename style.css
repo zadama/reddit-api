@@ -50,3 +50,9 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.btn-nav {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}

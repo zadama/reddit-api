@@ -57,24 +57,32 @@ $(document).ready(function () {
 
     renderPosts(subRedd);
   });
-});
 
-$(document).ready(function () {
-	$(".scrollable").click(function(){
-		$(".row").animate({
-			left: '250px',
-			height: '-=500px',
-			width: '-=500px'
-		});	
- 	});
-});
+  $(document).on("mouseenter", ".col", function () {
+    $(this).animate({
+      opacity: "0.6",
+    });
+  });
 
-$(document).ready(function () {
-	$(".normalize").click(function(){
-		$(".row").animate({
-			left: '250px',
-			height: '+=500px',
-			width: '+=500px'
-		});	
- 	});
+  $(document).on("mouseleave", ".col", function () {
+    $(this).animate({
+      opacity: "1",
+    });
+  });
+
+  $(".scrollable").click(function () {
+    $(".row").animate({
+      left: "250px",
+      height: "-=500px",
+      width: "-=500px",
+    });
+  });
+
+  $(".normalize").click(function () {
+    $(".row").animate({
+      left: "250px",
+      height: "+=500px",
+      width: "+=500px",
+    });
+  });
 });
